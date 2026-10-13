@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JobTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body data-page="login">
+    <header>
+        <h1>JobTrack</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="applications.html">My Applications</a></li>
+                <li><a href="login.html" class="active" aria-current="page">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <p class="hero-label">WELCOME BACK</p>
+            <h2>Log in to <span>JobTrack</span></h2>
+        </section>
+        <section class="auth">
+            <div class="auth-card">
+                <div class="tabs">
+                    <button type="button" class="tab active" data-target="loginForm">Login</button>
+                    <button type="button" class="tab" data-target="signupForm">Sign up</button>
+                </div>
+                <form id="loginForm" class="auth-form">
+                    <label>Email <input type="email" required></label>
+                    <label>Password <input type="password" minlength="6" required></label>
+                    <button type="submit">Login</button>
+                </form>
+                <form id="signupForm" class="auth-form" hidden>
+                    <label>Full name <input type="text" required></label>
+                    <label>Email <input type="email" required></label>
+                    <label>Password <input type="password" minlength="6" required></label>
+                    <button type="submit">Create account</button>
+                </form>
+                <p id="authMsg" role="status"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>JobTrack</h2>
+        <p>Making your job and internship search simple and organized.</p>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 JobTrack. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

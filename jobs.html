@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - JobTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body data-page="jobs">
+    <header>
+        <h1>JobTrack</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jobs.html" class="active" aria-current="page">Jobs</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="applications.html">My Applications</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <p class="hero-label">JOBS</p>
+            <h2>Find your next <span>job</span></h2>
+            <p class="hero-description">Browse openings and add the ones you apply to straight into your tracker.</p>
+        </section>
+        <section class="listings">
+            <div class="toolbar">
+                <input id="search" type="search" placeholder="Search by title or company" aria-label="Search">
+                <select id="location" aria-label="Filter by location"><option value="">All locations</option></select>
+            </div>
+            <p class="note">Sample listings for demonstration.</p>
+            <p id="count" class="count"></p>
+            <div id="grid" class="card-grid"></div>
+        </section>
+    </main>
+    <footer>
+        <h2>JobTrack</h2>
+        <p>Making your job and internship search simple and organized.</p>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 JobTrack. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

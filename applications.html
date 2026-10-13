@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications - JobTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body data-page="applications">
+    <header>
+        <h1>JobTrack</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="applications.html" class="active" aria-current="page">My Applications</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <p class="hero-label">MY APPLICATIONS</p>
+            <h2>Every application, <span>one list</span></h2>
+            <p class="hero-description">Add applications, change their status as things progress, and see your totals at a glance.</p>
+        </section>
+        <section class="tracker">
+            <div id="stats" class="stats"></div>
+            <form id="appForm" class="app-form">
+                <label>Company <input name="company" required></label>
+                <label>Role <input name="role" required></label>
+                <label>Location <input name="location"></label>
+                <label>Status <select name="status" id="statusSelect"></select></label>
+                <label>Date applied <input type="date" name="applicationDate" required></label>
+                <button class="btn" type="submit">Add</button>
+            </form>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Company</th><th>Role</th><th>Location</th><th>Date</th><th>Status</th><th></th></tr></thead>
+                    <tbody id="rows"></tbody>
+                </table>
+            </div>
+            <p id="empty" class="empty" hidden>No applications yet. Add one above or track one from the Jobs page.</p>
+        </section>
+    </main>
+    <footer>
+        <h2>JobTrack</h2>
+        <p>Making your job and internship search simple and organized.</p>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 JobTrack. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

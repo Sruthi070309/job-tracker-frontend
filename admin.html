@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - JobTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body data-page="admin">
+    <header>
+        <h1>JobTrack</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="applications.html">My Applications</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <p class="hero-label">ADMIN DASHBOARD</p>
+            <h2>Manage <span>internships</span></h2>
+            <p class="hero-description">Add, edit and remove the internships students see on the Internships page.</p>
+        </section>
+        <section class="tracker">
+            <p id="gate" class="empty" hidden></p>
+            <div id="panel" hidden>
+                <div id="adminStats" class="stats"></div>
+
+                <h3 class="admin-title" id="formTitle">Add an internship</h3>
+                <p id="adminMsg" role="status"></p>
+                <form id="internForm" class="app-form admin-form">
+                    <label>Title <input name="title" required maxlength="80"></label>
+                    <label>Company <input name="company" required maxlength="80"></label>
+                    <label>Location <input name="location" maxlength="60"></label>
+                    <label>Mode
+                        <select name="mode">
+                            <option>On-site</option>
+                            <option>Hybrid</option>
+                            <option>Remote</option>
+                        </select>
+                    </label>
+                    <label>Stipend <input name="pay" placeholder="Rs 10,000/mo" maxlength="40"></label>
+                    <label class="wide">About <textarea name="about" maxlength="300"></textarea></label>
+                    <div class="wide form-actions">
+                        <button class="btn" type="submit" id="saveBtn">Add internship</button>
+                        <button class="btn btn-outline" type="button" id="cancelBtn" hidden>Cancel</button>
+                    </div>
+                </form>
+
+                <h3 class="admin-title">All internships</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Title</th><th>Company</th><th>Location</th><th>Mode</th><th>Stipend</th><th></th></tr></thead>
+                        <tbody id="internRows"></tbody>
+                    </table>
+                </div>
+                <p id="internEmpty" class="empty" hidden>No internships yet. Add the first one above.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>JobTrack</h2>
+        <p>Making your job and internship search simple and organized.</p>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 JobTrack. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
